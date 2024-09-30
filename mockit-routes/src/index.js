@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const cors = require('cors');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3030;
 
 const delayMiddleware = require('./middlewares/delay');
 const chaosMonkeyMiddleware = require('./middlewares/chaos-monkey');

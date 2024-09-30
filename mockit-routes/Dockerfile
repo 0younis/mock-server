@@ -6,10 +6,10 @@ WORKDIR /usr/src/mockit-routes
 COPY package.json .
 COPY package-lock.json .
 
-RUN npm ci
+RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3030
 
 CMD ["npm", "start"]

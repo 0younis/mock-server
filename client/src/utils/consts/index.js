@@ -23,4 +23,4 @@ export const StatusCodes = {
 };
 
 export const MOCKIT_SERVER_URL =
-  process.env.REACT_APP_MOCKIT_SERVER_URL || 'localhost:3000';
+  process.env.REACT_APP_MOCKIT_SERVER_URL || 'localhost:3030';

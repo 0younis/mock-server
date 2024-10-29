@@ -125,7 +125,7 @@ export default function ({ settings: propSettings, customRoutes }) {
       <footer className="footer" aria-label="Site footer">
         <div className="content has-text-centered">
           <p>
-            an OpenSource tool developed modified by{' '}
+             OpenSource tool developed modified by{' '}
             <a
               href="https://github.com/t0nxx/"
               aria-label="Github Repo"

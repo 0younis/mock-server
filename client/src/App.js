@@ -125,13 +125,6 @@ export default function ({ settings: propSettings, customRoutes }) {
       <footer className="footer" aria-label="Site footer">
         <div className="content has-text-centered">
           <p>
-            <a
-              href="https://github.com/t0nxx/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <strong>MockIt v{version} </strong>
-            </a>{' '}
             an OpenSource tool developed modified by{' '}
             <a
               href="https://github.com/t0nxx/"

@@ -13,103 +13,235 @@
     },
     "routes": [
         {
-            "id": "6f935aa8-b629-4247-ba51-f02347b06e95",
-            "route": "/user",
-            "httpMethod": "GET",
+            "id": "ab3162de-55a2-4150-9d8e-c7e4c0ef2352",
+            "route": "/v1/merchant/details",
+            "httpMethod": "POST",
             "statusCode": "200",
             "delay": "0",
             "payload": {
-                "name": "Jermain Spinka",
-                "username": "Agnes71",
-                "email": "Taurean.Huels55@hotmail.com",
-                "address": {
-                    "street": "Kihn Inlet",
-                    "suite": "Apt. 784",
-                    "city": "South Doraside",
-                    "zipcode": "91828",
-                    "geo": {
-                        "lat": "-56.8426",
-                        "lng": "-122.9710"
+                "mid": "123456",
+                "fullNameAr": "mohammed",
+                "fullNameEn": "mohammed",
+                "email": "merchant@ecom.io",
+                "phoneNumber": "+96555123456",
+                "logoUrl": "https://example.com/logo.png",
+                "websiteLink": "https://example.com/logo.png",
+                "status": "APPROVED",
+                "fees": [
+                    {
+                        "id": "36b5e45f-a21f-4659-b70c-0464161e15d7",
+                        "enabled": true,
+                        "paymentMethod": "KNET",
+                        "percentageFee": 1.5,
+                        "fixedFee": 0.25,
+                        "feeType": "OR",
+                        "enableGreaterThan": true,
+                        "greaterThanPercentageFee": 2.5,
+                        "greaterThanFixedFee": 0.5,
+                        "greaterThanFeeType": "AND",
+                        "greaterThanTransactionsPerYear": 1000
+                    },
+                    {
+                        "id": "a8cf6cf3-90e6-4c3c-9f9f-0d769a40962b",
+                        "enabled": false,
+                        "paymentMethod": "VISA",
+                        "percentageFee": 2,
+                        "fixedFee": 0.3,
+                        "feeType": "AND",
+                        "enableGreaterThan": false,
+                        "greaterThanPercentageFee": 3,
+                        "greaterThanFixedFee": 0.6,
+                        "greaterThanFeeType": "OR",
+                        "greaterThanTransactionsPerYear": 1500
+                    }
+                ]
+            },
+            "headers": []
+        },
+        {
+            "id": "be9a5812-c742-41ae-bd39-ae3d58e58d66",
+            "route": "/v1/payment-core/charge",
+            "httpMethod": "POST",
+            "statusCode": "200",
+            "delay": "0",
+            "payload": {
+                "amount": {
+                    "currency": "KWD",
+                    "value": 100.505
+                },
+                "description": "pay order",
+                "threeDSecure": true,
+                "save_card": false,
+                "language": "en",
+                "product": "E_API",
+                "metadata": {
+                    "key1": "string",
+                    "key2": "string",
+                    "key3": "string",
+                    "key4": "string",
+                    "key5": "string"
+                },
+                "references": {
+                    "merchantReference": "string",
+                    "references2": "string"
+                },
+                "customer": {
+                    "firstName": "Ali",
+                    "lastName": " Hashem",
+                    "prefix": "+965",
+                    "phone": "66778899"
+                },
+                "sources": {
+                    "source": "KNET"
+                },
+                "merchant": {
+                    "mid": "1234",
+                    "name": "ecom store",
+                    "countryAlp3": "KWT",
+                    "metadata": {
+                        "key1": "string",
+                        "key2": "string",
+                        "key3": "string",
+                        "key4": "string",
+                        "key5": "string"
                     }
                 },
-                "phone": "810-578-0341",
-                "website": "jewell.name",
-                "company": {
-                    "name": "Quitzon, Wilderman and VonRueden",
-                    "catchPhrase": "Realigned zero administration encoding",
-                    "bs": "robust incubate synergies"
+                "order": {
+                    "ref": "151a3637-7f36-4952-9b10-4ed452c91bb6",
+                    "placedAt": "2024-10-23T11:07:45.805Z",
+                    "products": [
+                        {
+                            "name": "Product Name",
+                            "qty": 7,
+                            "price": 5
+                        }
+                    ]
+                },
+                "urls": {
+                    "callbackType": "REDIRECT",
+                    "successUrl": "https://www.host.com/pay",
+                    "errorUrl": "https://www.host.com/pay"
+                },
+                "options": {
+                    "mode": "API",
+                    "templateId": "TEMPLATE123"
+                },
+                "fees": {
+                    "id": "36b5e45f-a21f-4659-b70c-0464161e15d7",
+                    "enabled": true,
+                    "paymentMethod": "KNET",
+                    "percentageFee": 1.5,
+                    "fixedFee": 0.25,
+                    "feeType": "OR",
+                    "enableGreaterThan": true,
+                    "greaterThanPercentageFee": 2.5,
+                    "greaterThanFixedFee": 0.5,
+                    "greaterThanFeeType": "AND",
+                    "greaterThanTransactionsPerYear": 1000
+                },
+                "ecomMeta": {
+                    "chargeId": "CHA_API20241023d7uYznka",
+                    "ecomReference": "000037",
+                    "invoiceId": "INVOICE123456"
+                },
+                "transaction": {
+                    "status": "CPTURED",
+                    "url": "https://checkout.ecom.oi",
+                    "transaction_references": {
+                        "track_id": "1234567890",
+                        "tansaction_id": "12340993333434",
+                        "payment_id": "12340993333434",
+                        "reference_id": "12340993333434"
+                    }
                 }
             },
-            "disabled": false,
-            "headers": [
-                {
-                    "id": "b3f30451-3e1c-444f-9bfc-cb42441e9824",
-                    "header": "x-api-key",
-                    "value": "testing123"
-                }
-            ]
+            "headers": []
         },
         {
-            "id": "ec6166c8-ac50-4f2c-9d6f-b26ed677fe72",
-            "route": "/users",
-            "httpMethod": "GET",
-            "statusCode": "200",
-            "delay": "0",
-            "payload": [
-                {
-                    "name": "Edison Littel",
-                    "username": "Tyrel.Funk24",
-                    "email": "Burnice38@yahoo.com",
-                    "address": {
-                        "street": "Christelle Drive",
-                        "suite": "Apt. 884",
-                        "city": "Hoegerport",
-                        "zipcode": "59938",
-                        "geo": {
-                            "lat": "-49.1240",
-                            "lng": "148.9288"
-                        }
-                    },
-                    "phone": "(030) 225-3359 x582",
-                    "website": "priscilla.com",
-                    "company": {
-                        "name": "Reynolds Inc",
-                        "catchPhrase": "User-centric value-added productivity",
-                        "bs": "ubiquitous leverage paradigms"
-                    }
-                },
-                {
-                    "name": "Garth Corwin",
-                    "username": "Hilton33",
-                    "email": "Alvera_Runte78@yahoo.com",
-                    "address": {
-                        "street": "Ervin Gardens",
-                        "suite": "Apt. 778",
-                        "city": "Lake Laurynburgh",
-                        "zipcode": "39378",
-                        "geo": {
-                            "lat": "77.6111",
-                            "lng": "124.8899"
-                        }
-                    },
-                    "phone": "(477) 397-0658",
-                    "website": "selena.net",
-                    "company": {
-                        "name": "Schmeler LLC",
-                        "catchPhrase": "Adaptive global middleware",
-                        "bs": "interactive deploy bandwidth"
-                    }
-                }
-            ]
-        },
-        {
-            "id": "ffdf1846-0fb6-4cdf-8671-e339497094da",
-            "route": "/newRoute",
+            "id": "639b4d26-64d9-45ea-993a-927880a50650",
+            "route": "/v1/payment-core/get-transaction-details",
             "httpMethod": "GET",
             "statusCode": "200",
             "delay": "0",
             "payload": {
-                "test": true
+                "transaction": {
+                    "status": "CAPTURED",
+                    "paymentId": "100429710000018134",
+                    "trackId": "5227097769336577203",
+                    "tranData": "paymentid",
+                    "auth": "B09566",
+                    "avr": "N",
+                    "ref": "429710001443",
+                    "tranId": "429710002023088",
+                    "postDate": "1024"
+                },
+                "options": {
+                    "mode": "API",
+                    "templateId": "TEMPLATE123"
+                },
+                "ecomMeta": {
+                    "chargeId": "CHARGE123456",
+                    "ecomReference": "ECOMREF12345",
+                    "invoiceId": "INVOICE123456"
+                },
+                "chargeFees": 0.5,
+                "product": "E_API",
+                "urls": {
+                    "errorUrl": "https://www.host.com/pay",
+                    "successUrl": "https://www.host.com/pay",
+                    "callbackType": "REDIRECT"
+                },
+                "order": {
+                    "ref": "151a3637-7f36-4952-9b10-4ed452c91bb6",
+                    "placedAt": "2024-10-18T15:58:44.996Z",
+                    "products": [
+                        {
+                            "qty": 7,
+                            "name": "Product Name",
+                            "price": 5
+                        }
+                    ]
+                },
+                "amount": {
+                    "value": 10,
+                    "currency": "KWD"
+                },
+                "source": {
+                    "paymentMethod": "KNET"
+                },
+                "customer": {
+                    "phone": "66778899",
+                    "prefix": "+965",
+                    "lastName": "Hashem",
+                    "firstName": "Ali"
+                },
+                "language": "en",
+                "merchant": {
+                    "mid": "1234",
+                    "name": "ecom store",
+                    "metadata": {
+                        "key1": "string",
+                        "key2": "string",
+                        "key3": "string",
+                        "key4": "string",
+                        "key5": "string"
+                    },
+                    "countryAlp3": "KWT"
+                },
+                "metadata": {
+                    "key1": "string",
+                    "key2": "string",
+                    "key3": "string",
+                    "key4": "string",
+                    "key5": "string"
+                },
+                "save_card": true,
+                "references": {
+                    "references2": "string",
+                    "merchantReference": "string"
+                },
+                "description": "pay order",
+                "threeDSecure": true
             },
             "headers": []
         }

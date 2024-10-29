@@ -126,20 +126,20 @@ export default function ({ settings: propSettings, customRoutes }) {
         <div className="content has-text-centered">
           <p>
             <a
-              href="https://github.com/boyney123/mockit"
+              href="https://github.com/t0nxx/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <strong>MockIt v{version} </strong>
             </a>{' '}
-            an OpenSource tool developed by{' '}
+            an OpenSource tool developed modified by{' '}
             <a
-              href="https://github.com/boyney123"
+              href="https://github.com/t0nxx/"
               aria-label="Github Repo"
               target="_blank"
               rel="noopener noreferrer"
             >
-              David Boyne
+              Mahmoud Younis
             </a>
           </p>
         </div>
